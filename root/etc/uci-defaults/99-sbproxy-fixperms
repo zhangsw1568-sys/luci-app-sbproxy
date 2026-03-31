@@ -1,9 +1,0 @@
-#!/bin/sh
-chmod 0755 /etc/init.d/sbproxy 2>/dev/null || true
-chmod 0755 /etc/sbproxy/scripts/*.uc 2>/dev/null || true
-chmod 0755 /etc/sbproxy/scripts/*.sh 2>/dev/null || true
-rm -f /tmp/luci-indexcache
-rm -rf /tmp/luci-modulecache/* /tmp/luci-viewcache/*
-/etc/init.d/rpcd restart 2>/dev/null || true
-/etc/init.d/uhttpd restart 2>/dev/null || true
-exit 0
