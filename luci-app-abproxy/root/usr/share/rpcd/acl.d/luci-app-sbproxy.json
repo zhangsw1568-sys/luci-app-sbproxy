@@ -1,0 +1,21 @@
+{
+  "luci-app-sbproxy": {
+    "description": "Grant access to SBProxy",
+    "read": {
+      "uci": [ "sbproxy" ],
+      "ubus": { "service": [ "list" ] },
+      "file": {
+        "/usr/bin/ucode": [ "exec" ],
+        "/usr/bin/uclient-fetch": [ "exec" ],
+        "/etc/sbproxy/scripts/update_subscriptions.uc": [ "read", "exec" ],
+        "/etc/init.d/sbproxy": [ "exec" ],
+        "/var/run/sbproxy/sing-box.json": [ "read" ],
+        "/var/run/sbproxy/subscription.log": [ "read" ],
+        "/var/run/sbproxy/sbproxy.log": [ "read" ]
+      }
+    },
+    "write": {
+      "uci": [ "sbproxy" ]
+    }
+  }
+}

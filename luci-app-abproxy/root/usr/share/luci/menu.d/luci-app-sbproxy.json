@@ -1,0 +1,36 @@
+{
+  "admin/services/sbproxy": {
+    "title": "SBProxy",
+    "order": 60,
+    "action": { "type": "firstchild" },
+    "depends": {
+      "acl": [ "luci-app-sbproxy" ],
+      "uci": { "sbproxy": true }
+    }
+  },
+  "admin/services/sbproxy/client": {
+    "title": "Client",
+    "order": 10,
+    "action": { "type": "view", "path": "sbproxy/client" }
+  },
+  "admin/services/sbproxy/node": {
+    "title": "Nodes",
+    "order": 20,
+    "action": { "type": "view", "path": "sbproxy/node" }
+  },
+  "admin/services/sbproxy/dns": {
+    "title": "DNS",
+    "order": 25,
+    "action": { "type": "view", "path": "sbproxy/dns" }
+  },
+  "admin/services/sbproxy/subscription": {
+    "title": "Subscription",
+    "order": 30,
+    "action": { "type": "view", "path": "sbproxy/subscription" }
+  },
+  "admin/services/sbproxy/status": {
+    "title": "Status",
+    "order": 40,
+    "action": { "type": "view", "path": "sbproxy/status" }
+  }
+}
